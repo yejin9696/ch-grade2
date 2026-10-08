@@ -158,7 +158,7 @@ nav .who button{all:unset;cursor:pointer;color:var(--chalk);font-size:12.5px;mar
 
 <script>
 /* ───── 데이터 창구 주소: Apps Script 웹앱 배포 주소(/exec로 끝남)를 따옴표 안에 넣으세요 ───── */
-const API='https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnSDJWPqkUbVbOUWcdi_l0QT6_thJOW9T3vzzStbGFFvCVqucdROQwF-50vB029Ti_a70vjdXwMd_8I2_nouNuJWxjcA0n0K87Py60MTKLfR30ESCyPxkV0hVAK-wGo0sjELMU7WEGCTVzxDdjCxBcD7PC7SkxxY72As0xPvJYVXfiHLBjgVCTKodPLNKQShxDrUUF3aSO1uLeZvdD1kXBpooXizElOUNowIFmEa02WVOo9-WszdhgZ1efKraV724ozTDlyaKZB8TV0cEdburT21FjuOow&lib=MoB0e0pnY6tvkCNjNVP_f6cn_g7QdImDT';
+const API='https://script.google.com/macros/s/AKfycbzH7Ogp1RBBIm4YkUBJAduAbzZdvg9FiwO_g0TvEuiYy1rp0uV9DfUaANJNZEBKeqkn/exec';
 const run=(fn,...args)=>{
   if(!/^https:\/\/script\.google\.com\//.test(API)) return Promise.reject(new Error('index.html 맨 위의 API 칸에 Apps Script 웹앱 주소를 넣어 주세요.'));
   return fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({fn,args})})
